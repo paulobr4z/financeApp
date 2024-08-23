@@ -14,7 +14,7 @@ export const defaultTheme = {
   },
   FONT_FAMILY: {
     REGULAR: 'Poppins_400Regular',
-    SEM_BOLD: 'Poppins_600SemiBold',
+    SEMI_BOLD: 'Poppins_600SemiBold',
     BOLD: 'Poppins_700Bold',
   },
   FONT_SIZE: {

@@ -1,10 +1,20 @@
+import { TouchableOpacity } from 'react-native'
+import { Avatar } from '../../components/Avatar'
 import * as S from './styles'
-import { Text } from 'react-native'
+import { Bell } from 'phosphor-react-native'
+import { Spacer } from '../../components/Spacer'
 
 export function Home() {
   return (
     <S.Container>
-      <Text>Home</Text>
+      <S.Header>
+        <Avatar />
+        <S.UserName>Oi, Paulo!</S.UserName>
+        <Spacer />
+        <TouchableOpacity>
+          <Bell />
+        </TouchableOpacity>
+      </S.Header>
     </S.Container>
   )
 }
