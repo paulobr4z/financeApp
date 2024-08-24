@@ -10,7 +10,7 @@ export const defaultTheme = {
 
     GREEN_600: '#16A34A',
 
-    RED_600: '##e11d48',
+    RED_600: '#e11d48',
   },
   FONT_FAMILY: {
     REGULAR: 'Poppins_400Regular',
@@ -18,6 +18,8 @@ export const defaultTheme = {
     BOLD: 'Poppins_700Bold',
   },
   FONT_SIZE: {
+    '10': 10,
+    XS: 12,
     SM: 14,
     MD: 16,
     LG: 18,
