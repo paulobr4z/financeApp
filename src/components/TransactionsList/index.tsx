@@ -2,6 +2,7 @@ import { FlatList, Text } from 'react-native'
 import * as S from './styles'
 import { useEffect, useState } from 'react'
 import { Transaction } from '../Transaction'
+import { CaretDown } from 'phosphor-react-native'
 
 interface ITransaction {
   id: string
@@ -67,7 +68,10 @@ export function TransactionsList() {
 
   return (
     <S.Container>
-      <S.TransactionsListTitle>TransactionsList</S.TransactionsListTitle>
+      <S.TransactionsListTitleContainer>
+        <S.TransactionsListTitle>Agosto</S.TransactionsListTitle>
+        <CaretDown weight="bold" size={20} style={{ marginTop: 2 }} />
+      </S.TransactionsListTitleContainer>
       <FlatList
         data={transactionsData}
         keyExtractor={(item) => item.id}

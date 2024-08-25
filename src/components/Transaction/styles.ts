@@ -33,7 +33,7 @@ export const Row = styled.View`
 
 export const Title = styled.Text`
   ${({ theme }) => css`
-    font-size: ${theme.FONT_SIZE.MD}px;
+    font-size: ${theme.FONT_SIZE.MD};
     font-family: ${theme.FONT_FAMILY.SEMI_BOLD};
     color: ${theme.COLORS.BLACK};
   `};
@@ -41,7 +41,7 @@ export const Title = styled.Text`
 
 export const Amount = styled.Text`
   ${({ theme }) => css`
-    font-size: ${theme.FONT_SIZE.MD}px;
+    font-size: ${theme.FONT_SIZE.MD};
     font-family: ${theme.FONT_FAMILY.REGULAR};
     color: ${theme.COLORS.BLACK};
   `};
@@ -49,7 +49,7 @@ export const Amount = styled.Text`
 
 export const Subtitle = styled.Text`
   ${({ theme }) => css`
-    font-size: ${theme.FONT_SIZE.XS}px;
+    font-size: ${theme.FONT_SIZE.XS};
     font-family: ${theme.FONT_FAMILY.REGULAR};
     color: ${theme.COLORS.SLATE_500};
   `};

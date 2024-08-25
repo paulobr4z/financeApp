@@ -11,7 +11,7 @@ export const Container = styled.View`
 
 export const BalanceTitle = styled.Text`
   ${({ theme }) => css`
-    font-size: ${theme.FONT_SIZE.LG}px;
+    font-size: ${theme.FONT_SIZE.LG};
     font-family: ${theme.FONT_FAMILY.SEMI_BOLD};
     color: ${theme.COLORS.BLACK};
   `};
@@ -27,8 +27,8 @@ interface ITransactionIcon {
 }
 
 export const TransactionButton = styled.TouchableOpacity<ITransactionIcon>`
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   align-items: center;
   justify-content: center;
   background-color: ${({ theme, type }) =>
@@ -39,15 +39,16 @@ export const TransactionButton = styled.TouchableOpacity<ITransactionIcon>`
 
 export const TransactionTypeTitle = styled.Text`
   ${({ theme }) => css`
-    font-size: ${theme.FONT_SIZE[10]}px;
+    font-size: ${theme.FONT_SIZE.XS};
     font-family: ${theme.FONT_FAMILY.REGULAR};
     color: ${theme.COLORS.SLATE_500};
+    line-height: ${theme.LINE_HEIGHT.XS};
   `};
 `
 
 export const TransactionTypeContent = styled.Text`
   ${({ theme }) => css`
-    font-size: ${theme.FONT_SIZE.XS}px;
+    font-size: ${theme.FONT_SIZE.SM};
     font-family: ${theme.FONT_FAMILY.SEMI_BOLD};
     color: ${theme.COLORS.BLACK};
   `};

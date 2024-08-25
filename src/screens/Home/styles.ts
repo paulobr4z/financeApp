@@ -15,7 +15,7 @@ export const Header = styled.View`
 export const UserName = styled.Text`
   padding-left: 8px;
   ${({ theme }) => css`
-    font-size: ${theme.FONT_SIZE.SM}px;
+    font-size: ${theme.FONT_SIZE.SM};
     font-family: ${theme.FONT_FAMILY.SEMI_BOLD};
     color: ${theme.COLORS.BLACK};
   `};
