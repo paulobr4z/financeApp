@@ -3,7 +3,8 @@ import { Avatar } from '../../components/Avatar'
 import * as S from './styles'
 import { Bell } from 'phosphor-react-native'
 import { Spacer } from '../../components/Spacer'
-import { Balance } from '../../components/balance'
+import { Balance } from '../../components/Balance'
+import { TransactionsList } from '../../components/TransactionsList'
 
 export function Home() {
   return (
@@ -17,6 +18,7 @@ export function Home() {
         </TouchableOpacity>
       </S.Header>
       <Balance />
+      <TransactionsList />
     </S.Container>
   )
 }

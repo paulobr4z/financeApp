@@ -1,7 +1,7 @@
 import { View } from 'react-native'
-import { Spacer } from '../Spacer'
 import * as S from './styles'
 import { ArrowUp, ArrowDown } from 'phosphor-react-native'
+import { Spacer } from '../Spacer'
 
 export function Balance() {
   return (
@@ -19,7 +19,7 @@ export function Balance() {
           <S.TransactionTypeTitle>Receitas</S.TransactionTypeTitle>
           <S.TransactionTypeContent>R$ 1.200,00</S.TransactionTypeContent>
         </View>
-        <S.Spacer />
+        <Spacer />
         <S.TransactionButton type="outcome">
           <ArrowDown weight="bold" size={18} color="#fff" />
         </S.TransactionButton>

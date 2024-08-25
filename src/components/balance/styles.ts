@@ -22,10 +22,6 @@ export const Row = styled.View`
   align-items: center;
 `
 
-export const Spacer = styled.View`
-  flex: 1;
-`
-
 interface ITransactionIcon {
   type: 'income' | 'outcome'
 }
