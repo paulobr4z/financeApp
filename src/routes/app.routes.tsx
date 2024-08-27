@@ -17,6 +17,7 @@ export function AppRoutes() {
         tabBarActiveTintColor: COLORS.BLACK,
         tabBarInactiveTintColor: COLORS.SLATE_500,
         tabBarLabelStyle: { display: 'none' },
+        tabBarHideOnKeyboard: true,
       }}
     >
       <Screen
