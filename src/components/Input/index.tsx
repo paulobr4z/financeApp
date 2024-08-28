@@ -1,8 +1,21 @@
-import { TextInputProps } from 'react-native'
+/* eslint-disable react/display-name */
+import { TextInput, TextInputProps } from 'react-native'
 import * as S from './styles'
+import { forwardRef, useState } from 'react'
+import { Masks } from 'react-native-mask-input'
 
 interface IInput extends TextInputProps {}
 
-export function Input({ ...rest }: IInput) {
-  return <S.Input {...rest} />
-}
+export const Input = forwardRef<TextInput, IInput>((props, ref) => {
+  const [creditCard, setCreditCard] = useState('')
+
+  return (
+    <S.Input
+      value={creditCard}
+      onChangeText={setCreditCard}
+      mask={Masks.BRL_CURRENCY}
+      ref={ref}
+      {...props}
+    />
+  )
+})

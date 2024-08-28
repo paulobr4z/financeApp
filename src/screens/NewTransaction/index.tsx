@@ -22,7 +22,7 @@ export function NewTransaction() {
         <S.NewTransactionTitle>
           Qual é o valor do lançamento?
         </S.NewTransactionTitle>
-        <Input keyboardType="numeric" />
+        <Input ref={inputRef} placeholder="R$ 0,00" keyboardType="numeric" />
       </S.Header>
 
       <S.TypeContainer>

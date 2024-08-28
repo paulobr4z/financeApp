@@ -1,6 +1,8 @@
+// import { TextInput } from 'react-native'
 import styled, { css } from 'styled-components/native'
+import MaskInput from 'react-native-mask-input'
 
-export const Input = styled.TextInput`
+export const Input = styled(MaskInput)`
   border: 1px solid ${({ theme }) => theme.COLORS.SLATE_300};
   border-radius: 8px;
   background-color: ${({ theme }) => theme.COLORS.WHITE};
