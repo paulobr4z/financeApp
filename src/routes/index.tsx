@@ -2,9 +2,10 @@ import { View } from 'react-native'
 import { useTheme } from 'styled-components/native'
 import { NavigationContainer } from '@react-navigation/native'
 
-import { AppRoutes } from './app.routes'
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
+
+import { StackRoutes } from './stack.routes'
 
 export function Routes() {
   const { COLORS } = useTheme()
@@ -14,7 +15,7 @@ export function Routes() {
       <GestureHandlerRootView style={{ flex: 1 }}>
         <BottomSheetModalProvider>
           <NavigationContainer>
-            <AppRoutes />
+            <StackRoutes />
           </NavigationContainer>
         </BottomSheetModalProvider>
       </GestureHandlerRootView>

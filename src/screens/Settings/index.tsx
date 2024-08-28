@@ -1,13 +1,17 @@
 import * as S from './styles'
+import { useCallback, useMemo, useRef } from 'react'
 import { Button, StyleSheet, Text } from 'react-native'
 import {
   BottomSheetBackdrop,
   BottomSheetModal,
   BottomSheetView,
 } from '@gorhom/bottom-sheet'
-import { useCallback, useMemo, useRef } from 'react'
+import { useNavigation } from '@react-navigation/native'
+import { StackNavigatorRoutesProps } from '../../routes/stack.routes'
 
 export function Settings() {
+  const { navigate } = useNavigation<StackNavigatorRoutesProps>()
+
   const bottomSheetModalRef = useRef<BottomSheetModal>(null)
 
   // variables
@@ -26,6 +30,7 @@ export function Settings() {
         title="Present Modal"
         color="black"
       />
+      <Button title="Go to Categories" onPress={() => navigate('categories')} />
       <BottomSheetModal
         ref={bottomSheetModalRef}
         index={0}

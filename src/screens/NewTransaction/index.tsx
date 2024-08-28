@@ -54,7 +54,7 @@ export function NewTransaction() {
       <S.CategoryContainer>
         <S.NewTransactionTitle>Categoria</S.NewTransactionTitle>
         <S.CategoryButton>
-          <S.CategoryText>Lazer</S.CategoryText>
+          <S.CategoryText>Selecionar</S.CategoryText>
           <CaretRight weight="bold" size={18} />
         </S.CategoryButton>
       </S.CategoryContainer>

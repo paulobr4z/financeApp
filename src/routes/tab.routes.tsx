@@ -1,13 +1,25 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { Home } from '../screens/Home'
-import { GearSix, House, PlusCircle } from 'phosphor-react-native'
+import {
+  BottomTabNavigationProp,
+  createBottomTabNavigator,
+} from '@react-navigation/bottom-tabs'
 import { useTheme } from 'styled-components/native'
+import { GearSix, House, PlusCircle } from 'phosphor-react-native'
+
+import { Home } from '../screens/Home'
 import { NewTransaction } from '../screens/NewTransaction'
 import { Settings } from '../screens/Settings'
 
-const { Navigator, Screen } = createBottomTabNavigator()
+type TabRoutes = {
+  home: undefined
+  newTransaction: undefined
+  settings: undefined
+}
 
-export function AppRoutes() {
+export type StackNavigatorRoutesProps = BottomTabNavigationProp<TabRoutes>
+
+const { Navigator, Screen } = createBottomTabNavigator<TabRoutes>()
+
+export function TabRoutes() {
   const { COLORS } = useTheme()
 
   return (
@@ -21,7 +33,7 @@ export function AppRoutes() {
       }}
     >
       <Screen
-        name="Home"
+        name="home"
         component={Home}
         options={{
           tabBarIcon: ({ color }) => (
@@ -30,7 +42,7 @@ export function AppRoutes() {
         }}
       />
       <Screen
-        name="New Transaction"
+        name="newTransaction"
         component={NewTransaction}
         options={{
           tabBarIcon: ({ color }) => (
@@ -39,7 +51,7 @@ export function AppRoutes() {
         }}
       />
       <Screen
-        name="Settings"
+        name="settings"
         component={Settings}
         options={{
           tabBarIcon: ({ color }) => (
