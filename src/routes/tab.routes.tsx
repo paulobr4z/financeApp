@@ -15,7 +15,7 @@ type TabRoutes = {
   settings: undefined
 }
 
-export type StackNavigatorRoutesProps = BottomTabNavigationProp<TabRoutes>
+export type TabNavigatorRoutesProps = BottomTabNavigationProp<TabRoutes>
 
 const { Navigator, Screen } = createBottomTabNavigator<TabRoutes>()
 

@@ -1,20 +1,14 @@
 import * as S from './styles'
 import { Input } from '../../components/Input'
-import { useCallback, useRef, useState } from 'react'
+import { useState } from 'react'
 import { CaretRight } from 'phosphor-react-native'
-import { useFocusEffect } from '@react-navigation/native'
-import { TextInput } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { StackNavigatorRoutesProps } from '../../routes/stack.routes'
 
 export function NewTransaction() {
   const [transactiontype, setTransactionType] = useState('')
 
-  const inputRef = useRef<TextInput>(null)
-
-  useFocusEffect(
-    useCallback(() => {
-      inputRef.current?.focus()
-    }, []),
-  )
+  const { navigate } = useNavigation<StackNavigatorRoutesProps>()
 
   return (
     <S.Container>
@@ -22,12 +16,12 @@ export function NewTransaction() {
         <S.NewTransactionTitle>
           Qual é o valor do lançamento?
         </S.NewTransactionTitle>
-        <Input ref={inputRef} placeholder="R$ 0,00" keyboardType="numeric" />
+        <Input hasMask placeholder="R$ 0,00" keyboardType="numeric" />
       </S.Header>
 
       <S.TypeContainer>
         <S.TransactionTypeTitle>
-          Qual é o valor do lançamento?
+          Qual o tipo do lançamento?
         </S.TransactionTypeTitle>
         <S.ButtonTypeContainer>
           <S.TransactionTypeButton
@@ -53,7 +47,7 @@ export function NewTransaction() {
 
       <S.CategoryContainer>
         <S.NewTransactionTitle>Categoria</S.NewTransactionTitle>
-        <S.CategoryButton>
+        <S.CategoryButton onPress={() => navigate('categories')}>
           <S.CategoryText>Selecionar</S.CategoryText>
           <CaretRight weight="bold" size={18} />
         </S.CategoryButton>

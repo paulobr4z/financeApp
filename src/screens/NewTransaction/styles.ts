@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components/native'
 export const Container = styled(SafeAreaView)`
   flex: 1;
   background-color: ${({ theme }) => theme.COLORS.SLATE_200};
-  padding: 24px;
+  padding: 32px 24px 24px 24px;
 `
 
 export const Header = styled.View`
@@ -18,6 +18,7 @@ export const NewTransactionTitle = styled.Text`
     color: ${theme.COLORS.BLACK};
     line-height: ${theme.LINE_HEIGHT.XL};
   `};
+  padding: 0 4px;
 `
 
 export const ButtonTypeContainer = styled.View`
@@ -59,7 +60,7 @@ export const CategoryContainer = styled.View`
   margin-top: 32px;
 `
 
-export const CategoryButton = styled.View`
+export const CategoryButton = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -85,6 +86,7 @@ export const TransactionTypeTitle = styled.Text`
     color: ${theme.COLORS.BLACK};
     line-height: ${theme.LINE_HEIGHT.XL};
   `};
+  padding: 0 4px;
 `
 
 export const TypeContainer = styled.View`
