@@ -1,5 +1,7 @@
 import { CaretRight } from 'phosphor-react-native'
 import * as S from './styles'
+import { useNavigation } from '@react-navigation/native'
+import { TabNavigatorRoutesProps } from '../../routes/tab.routes'
 
 interface ICategory {
   title: string
@@ -7,8 +9,10 @@ interface ICategory {
 }
 
 export function Category({ title, colorCircle }: ICategory) {
+  const { navigate } = useNavigation<TabNavigatorRoutesProps>()
+
   return (
-    <S.Container>
+    <S.Container onPress={() => navigate('newTransaction')}>
       <S.Row>
         <S.Circle colorCircle={colorCircle} />
         <S.Title>{title}</S.Title>
