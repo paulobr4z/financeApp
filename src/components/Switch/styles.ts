@@ -1,20 +1,17 @@
 import styled from 'styled-components/native'
+import Animated from 'react-native-reanimated'
 
-interface IContainer {
-  isActive: boolean
-}
-
-export const Container = styled.TouchableOpacity<IContainer>`
-  width: 52px;
+export const Container = styled(Animated.View)`
+  position: relative;
+  width: 51px;
   height: 31px;
-  background-color: ${({ theme }) => theme.COLORS.GREEN_600};
   border-radius: 99px;
   padding: 0 2px;
   justify-content: center;
-  align-items: ${({ isActive }) => (!isActive ? 'flex-start' : 'flex-end')};
 `
 
-export const Indicator = styled.View`
+export const Indicator = styled(Animated.View)`
+  position: absolute;
   width: 27px;
   height: 27px;
   background-color: ${({ theme }) => theme.COLORS.WHITE};
