@@ -6,7 +6,6 @@ export const Container = styled.TouchableOpacity`
   justify-content: space-between;
   background-color: ${({ theme }) => theme.COLORS.WHITE};
   padding: 8px 12px;
-  /* border-bottom: 1px solid ${({ theme }) => theme.COLORS.SLATE_300}; */
   border-bottom-width: 1px;
   border-bottom-color: #cbd5e1;
 `

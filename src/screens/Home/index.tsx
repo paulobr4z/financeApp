@@ -10,7 +10,7 @@ export function Home() {
   return (
     <S.Container>
       <S.Header>
-        <Avatar />
+        <Avatar urlImage="https://github.com/paulobr4z.png" />
         <S.UserName>Oi, Paulo!</S.UserName>
         <Spacer />
         <TouchableOpacity>

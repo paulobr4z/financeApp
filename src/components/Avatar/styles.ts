@@ -1,7 +1,18 @@
 import styled from 'styled-components/native'
 
-export const Image = styled.Image`
-  width: 48px;
-  height: 48px;
+interface IImage {
+  width: string
+  height: string
+}
+
+export const Image = styled.Image<IImage>`
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
+  border-radius: 200px;
+`
+
+export const Default = styled.Image<IImage>`
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
   border-radius: 200px;
 `

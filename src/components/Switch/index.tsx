@@ -27,7 +27,7 @@ export function Switch({ isActive = true, toggleSwitch }: ISwitch) {
   const colorChangingElementStyle = useAnimatedStyle(() => {
     const backgroundColor = interpolateColor(
       offset.value,
-      [2, 22],
+      [2, 20],
       [COLORS.SLATE_400, COLORS.GREEN_600],
     )
 
@@ -39,12 +39,12 @@ export function Switch({ isActive = true, toggleSwitch }: ISwitch) {
   const handlePress = () => {
     if (isActive) {
       offset.value = withTiming(2, {
-        duration: 300,
+        duration: 250,
         easing: Easing.inOut(Easing.ease),
       })
     } else {
-      offset.value = withTiming(22, {
-        duration: 300,
+      offset.value = withTiming(20, {
+        duration: 250,
         easing: Easing.inOut(Easing.ease),
       })
     }
