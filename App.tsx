@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 import { StatusBar } from 'react-native'
 import { ThemeProvider } from 'styled-components/native'
+import { SQLiteProvider } from 'expo-sqlite'
 import {
   useFonts,
   Poppins_400Regular,
@@ -12,6 +13,7 @@ import { defaultTheme } from './src/theme'
 
 import { Routes } from './src/routes'
 import { Loading } from './src/components/Loading'
+import { initializeDatabase } from './src/database/initializeDatabase'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -22,12 +24,14 @@ export default function App() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <StatusBar
-        barStyle="dark-content"
-        backgroundColor="transparent"
-        translucent
-      />
-      {fontsLoaded ? <Routes /> : <Loading />}
+      <SQLiteProvider databaseName="myDatabase.db" onInit={initializeDatabase}>
+        <StatusBar
+          barStyle="dark-content"
+          backgroundColor="transparent"
+          translucent
+        />
+        {fontsLoaded ? <Routes /> : <Loading />}
+      </SQLiteProvider>
     </ThemeProvider>
   )
 }
