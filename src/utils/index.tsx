@@ -11,3 +11,9 @@ export function formatDateTime() {
 
   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
 }
+
+export function formatCurrency(value: string) {
+  const formated = value.split(' ')
+
+  return formated[1].replace(/[.,]/g, '')
+}

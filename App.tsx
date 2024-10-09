@@ -14,6 +14,7 @@ import { defaultTheme } from './src/theme'
 import { Routes } from './src/routes'
 import { Loading } from './src/components/Loading'
 import { initializeDatabase } from './src/database/initializeDatabase'
+import { TransactionProvider } from './src/hooks/useTransaction'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -25,12 +26,14 @@ export default function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <SQLiteProvider databaseName="myDatabase.db" onInit={initializeDatabase}>
-        <StatusBar
-          barStyle="dark-content"
-          backgroundColor="transparent"
-          translucent
-        />
-        {fontsLoaded ? <Routes /> : <Loading />}
+        <TransactionProvider>
+          <StatusBar
+            barStyle="dark-content"
+            backgroundColor="transparent"
+            translucent
+          />
+          {fontsLoaded ? <Routes /> : <Loading />}
+        </TransactionProvider>
       </SQLiteProvider>
     </ThemeProvider>
   )

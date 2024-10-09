@@ -11,6 +11,10 @@ export const Header = styled.View`
   gap: 8px;
 `
 
+export const NewTransactionContainer = styled.View`
+  margin-top: 32px;
+`
+
 export const NewTransactionTitle = styled.Text`
   ${({ theme }) => css`
     font-size: ${theme.FONT_SIZE.LG};
